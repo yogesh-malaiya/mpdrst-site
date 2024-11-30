@@ -1,0 +1,550 @@
+/* Basic styles for the body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
+    /* Prevent overlap with fixed navbar */
+}
+
+/* css for header and footer  */
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: calc(100% - 40px);
+    /* Account for padding */
+    margin: 0 20px;
+    /* Prevent overflow */
+    z-index: 999;
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+/* Logo container */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo image styling */
+.logo img {
+    height: 40px;
+    /* Adjust to fit navbar */
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #ff5722;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Place dropdown directly below the parent */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border-radius: 5px;
+    z-index: 999;
+    min-width: 150px;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #333;
+    /* Default text color (dark grey) */
+    padding: 8px 15px;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: transparent;
+    /* No background by default */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    /* background-color: #ff5722; */
+    /* Orange background on hover */
+    color: #fff;
+    /* White text on hover */
+}
+
+/* Keep the dropdown visible when hovering over parent li or the dropdown itself */
+.nav-links ul li:hover .dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+body {
+    /* background: linear-gradient(247deg, #0e15ea, #f3f3f9, #f52c0b, #0be1f5); */
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 59s ease infinite;
+    -moz-animation: AnimationName 59s ease infinite;
+    -o-animation: AnimationName 59s ease infinite;
+    animation: AnimationName 59s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 51%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 51%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-o-keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 51%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 51%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+
+
+/* Button styles */
+.nav-links button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.nav-links button:hover {
+    background-color: #e64a19;
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: calc(100% - 40px);
+        margin: 0 20px;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: left 0.3s;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links ul li {
+        margin: 15px 0;
+    }
+}
+
+/* footer styles */
+
+footer {
+    flex-shrink: 0;
+    background-color: #002147;
+    color: #fff;
+    padding: 10px;
+    /* Reduced padding to decrease height */
+    bottom: 0;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    z-index: 999;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wrap content to multiple lines on smaller screens */
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex-basis: 30%;
+    margin-bottom: 10px;
+    /* Reduced bottom margin for less spacing */
+}
+
+@media (max-width: 768px) {
+    .footer-column {
+        flex-basis: 100%;
+    }
+
+    .social-links {
+        text-align: center;
+        /* Center social links on smaller screens */
+    }
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.social-links a:hover {
+    color: #f00;
+}
+
+hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+    width: 100%;
+}
+
+
+
+.footer-column h4 {
+    margin-bottom: 5px;
+    /* Reduced heading margin */
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 3px;
+    /* Reduced spacing between list items */
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the copyright text */
+    margin-top: 10px;
+    /* Reduced spacing above copyright text */
+}
+/* End of header and footer css */
+
+/* main page css */
+
+body>main> .container {
+    flex-shrink: 0;
+    color: #fff;
+    padding: 20px;
+    /* position: fixed; */
+    bottom: 0;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    z-index: 999;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body>main>.container>.hero-section {
+    background-image: url('../images/hero.jpg');
+    /* Use forward slashes for file paths */
+    background-size: cover;
+    /* Ensures the image covers the entire element */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    background-attachment: fixed;
+    /* Keeps the background fixed during scrolling */
+    background-position: center;
+    /* Centers the image */
+    height: 100vh;
+    width: 100%;
+    opacity: 0.7;
+    /* Ensures the section takes full viewport height */
+    display: flex;
+    /* Aligns the content inside */
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    color: white;
+    /* Sets text color to contrast with the image */
+    text-align: center;
+    /* Centers the text inside */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hero-section .textarea {
+    max-width: 600px;
+    /* Set a maximum width for better readability */
+    margin: 0 auto;
+    /* Center the text */
+    text-align: center;
+    /* Align text to the center */
+}
+
+.hero-section .textarea h1 {
+    font-family: 'Merriweather', serif;
+    /* Apply a sophisticated serif font */
+    font-size: 2.5rem;
+    /* Adjust font size for responsiveness */
+    line-height: 1.4;
+    /* Improve line spacing */
+    margin-bottom: 15px;
+    /* Add spacing below the heading */
+    color: #fff;
+    /* Ensure the text is visible on a dark background */
+}
+
+.hero-section .textarea p {
+    font-family: 'Roboto', sans-serif;
+    /* Apply a clean sans-serif font */
+    font-size: 1.2rem;
+    /* Adjust font size for readability */
+    line-height: 1.6;
+    /* Improve line spacing */
+    margin-bottom: 20px;
+    /* Add spacing below the paragraph */
+    color: #f0f0f0;
+    /* Lighter color for better contrast */
+}
+
+.hero-section button {
+    background-color: #ff4500;
+    /* Bright orange for visibility */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section button:hover {
+    background-color: #e63900;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .hero-section .textarea h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .textarea p {
+        font-size: 1rem;
+    }
+
+    .hero-section button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* donate section  */
+.donate-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between columns */
+    align-items: center; /* Align content vertically */
+    text-align: left; /* Align text content to the left */
+    padding: 20px;
+    max-width: 1200px; /* Constrain the width for better readability */
+    margin: 0 auto; /* Center the section */
+    box-sizing: border-box;
+}
+
+.donate-section h2 {
+    font-size: 2rem;
+    color: #333;
+    grid-column: 1 / span 2; /* Span both columns for the heading */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.donate-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.donate-section h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+.donate-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.donate-section ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.qr-code-button {
+    text-align: center; /* Center content in the QR code column */
+}
+
+.qr-code-button img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.qr-code-button button {
+    background-color: #e63900;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.qr-code-button button:hover {
+    background-color: #c53000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donate-section {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+
+    .qr-code-button {
+        margin-top: 20px;
+    }
+}

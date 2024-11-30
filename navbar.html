@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="css\mainpage.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img src="images\mpdrst-logo.png" alt="Logo"></a>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Guru Diksha</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Services</a></li>
+                <li>
+                    <a href="#">About</a>
+                    <div class="dropdown-content">
+                        <a href="#">About Guruji</a>
+                        <a href="#">About MPDRST</a>
+                        <a href="#">About Members</a>
+                    </div>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button>Donate</button>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="hero-section">
+                <div class="textarea">
+                    <h1>"Join Hands to Build Sacred Spaces!</h1>
+                    <p>Your generous donation can help construct temples that inspire devotion and spiritual growth.
+                        Together, let’s preserve our heritage and create a haven for divine connection.</p>
+                    <button onclick="openUPI()">Donate</button>
+                </div>
+            </div>
+            <div class="donate-section">
+                <div class="donation">
+                    <h2>Donate Us</h2>
+                    <p>Service towards the Society: If you wish to Donate Us</p>
+                    <p>Every penny you donate today is a lifeline to someone in need, a beacon of hope in their darkest
+                        hour. Join us in making a difference, one heart at a time.</p>
+                    <h3>BANK DETAILS FOR DONATION:</h3>
+                    <ul>
+                        <li><strong>Account Holder:</strong> Maa Parashakti Dharm Rahasya Sewa Trust</li>
+                        <li><strong>Account Number:</strong> 50200093089111</li>
+                        <li><strong>IFSC:</strong> HDFC0008822</li>
+                    </ul>
+                    <button class="donate-button">Donate Now</button>
+                </div>
+                <div class="qr-code">
+                    <img src="images/mpdrst-qr.jpeg" alt="QR Code">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer style="background-color: #002147; color: #fff; padding: 20px;">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>Address: 123 Main Street, City, State, ZIP</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@example.com</p>
+            </div>
+            <div class="footer-column social-links">
+                <a href="https://www.facebook.com/Dharam-rahasya-channel-925495294279826" target="_blank"><i
+                        class="fab fa-facebook-f">facebook</i></a>
+                <a href="https://www.instagram.com/dharam1rahasya" target="_blank"><i
+                        class="fab fa-instagram">Instagram</i></a>
+                <a href="https://www.youtube.com/@dharamrahasya"   target="_blank"><i
+                        class="fab fa-youtube">Youtube</i></a>
+                <a href="https://www.twitter.com/DRahasya" target="_blank"><i class="fab fa-twitter">X</i></a>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <span>&copy;<span id="copyright-year"></span> MPDRST.ORG. All Rights Reserved.</span>
+            <span>Site Developed by MPDRST Team</span>
+        </div>
+        <script>
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        function openUPI() {
+            const upiLink = "upi://pay?pa=vyapar.171104982881@hdfcbank&pn=Business%20Name&am=10.00&cu=INR";
+            window.location.href = upiLink;  // This will open the UPI app installed on the device
+        }
+    </script>
+
+</body>
+
+</html>
