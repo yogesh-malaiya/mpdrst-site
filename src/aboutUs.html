@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
-    <!-- <link rel="stylesheet" href="css\mainpage.css"> -->
+    <title>About Us</title>
     <style>
         /* Basic styles for the body */
         * {
@@ -351,328 +350,62 @@
             margin-top: 10px;
             /* Reduced spacing above copyright text */
         }
-
-        /* End of header and footer css */
-
-        /* main page css */
-
-        body>main>.container {
-            flex-shrink: 0;
-            color: #fff;
-            padding: 20px;
-            /* position: fixed; */
-            bottom: 0;
-            width: calc(100% - 40px);
-            margin: 0 20px;
-            z-index: 999;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        body>main>.container>.hero-section {
-            background-image: url('images/hero.jpg');
-            /* Use forward slashes for file paths */
-            background-size: cover;
-            /* Ensures the image covers the entire element */
-            background-repeat: no-repeat;
-            /* Prevents the image from repeating */
-            background-attachment: fixed;
-            /* Keeps the background fixed during scrolling */
-            background-position: center;
-            /* Centers the image */
-            height: 100vh;
-            width: 100%;
-            opacity: 0.7;
-            /* Ensures the section takes full viewport height */
-            display: flex;
-            /* Aligns the content inside */
-            justify-content: center;
-            /* Centers content horizontally */
-            align-items: center;
-            /* Centers content vertically */
-            color: white;
-            /* Sets text color to contrast with the image */
-            text-align: center;
-            /* Centers the text inside */
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .hero-section .textarea {
-            max-width: 600px;
-            /* Set a maximum width for better readability */
-            margin: 0 auto;
-            /* Center the text */
-            text-align: center;
-            /* Align text to the center */
-        }
-
-        .hero-section .textarea h1 {
-            font-family: 'Merriweather', serif;
-            /* Apply a sophisticated serif font */
-            font-size: 2.5rem;
-            /* Adjust font size for responsiveness */
-            line-height: 1.4;
-            /* Improve line spacing */
-            margin-bottom: 15px;
-            /* Add spacing below the heading */
-            color: #fff;
-            /* Ensure the text is visible on a dark background */
-        }
-
-        .hero-section .textarea p {
-            font-family: 'Roboto', sans-serif;
-            /* Apply a clean sans-serif font */
-            font-size: 1.2rem;
-            /* Adjust font size for readability */
-            line-height: 1.6;
-            /* Improve line spacing */
-            margin-bottom: 20px;
-            /* Add spacing below the paragraph */
-            color: #f0f0f0;
-            /* Lighter color for better contrast */
-        }
-
-        .hero-section button {
-            background-color: #ff4500;
-            /* Bright orange for visibility */
-            color: #fff;
-            border: none;
-            padding: 12px 24px;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .hero-section button:hover {
-            background-color: #e63900;
-            transform: scale(1.05);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        .hero-section button:active {
-            transform: scale(0.95);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        @media (max-width: 768px) {
-            .hero-section .textarea h1 {
-                font-size: 2rem;
-            }
-
-            .hero-section .textarea p {
-                font-size: 1rem;
-            }
-
-            .hero-section button {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-        }
-
-        /* donate section  */
-        /* General styles for the donate section */
-        .donate-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            /* Two equal columns */
-            gap: 20px;
-            align-items: start;
-            text-align: left;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 20px auto;
-            /* Added margin to prevent overlapping */
-            box-sizing: border-box;
-            background: linear-gradient(135deg, #ff9800, #ff5722);
-            /* Gradient background */
-            color: white;
-            /* Text color */
-            border-radius: 10px;
-            /* Rounded corners for the section */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            /* Subtle shadow effect */
-            position: relative;
-            /* Ensure proper stacking in layout */
-            z-index: 1;
-            /* Prevent overlap issues */
-        }
-
-        /* Heading styles */
-        .donate-section h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            color: #fff;
-            /* White text for headings */
-        }
-
-        .donate-section h3 {
-            font-size: 20px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: #ffcc00;
-            /* Accent color for subheadings */
-        }
-
-        /* Paragraph styles */
-        .donate-section p {
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        /* List styles for bank details */
-        .donate-section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .donate-section ul li {
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-
-        .donate-section ul li strong {
-            color: #ffcc00;
-            /* Highlighted text color */
-        }
-
-        /* QR code section */
-        .qr-code img {
-            max-width: 100%;
-            height: auto;
-            border: 2px solid #fff;
-            /* White border around the QR code */
-            border-radius: 10px;
-            /* Rounded corners for the QR code */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            /* Subtle shadow effect */
-        }
-
-        /* Button styles */
-        .donate-button {
-            display: inline-block;
-            background-color: #ffffff;
-            /* White button background */
-            color: #ff5722;
-            /* Orange text color */
-            padding: 10px 20px;
-            font-size: 16px;
-            text-decoration: none;
-            border-radius: 5px;
-            /* Rounded corners for the button */
-            transition: background-color 0.3s ease;
-            /* Smooth hover transition */
-            border: 2px solid #ff5722;
-            /* Orange border for the button */
-        }
-
-        .donate-button:hover {
-            background-color: #ff5722;
-            /* Orange background on hover */
-            color: #ffffff;
-            /* White text on hover */
-        }
-
-        /* Responsive styling for smaller screens */
-        @media (max-width: 768px) {
-            .donate-section {
-                grid-template-columns: 1fr;
-                /* Stack content in a single column */
-                text-align: center;
-                /* Center align content for mobile */
-            }
-
-            .qr-code {
-                margin-top: 20px;
-                /* Add spacing above the QR code */
-            }
-        }
     </style>
+
+    <!-- End of header and footer css -->
 </head>
 
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href="#"><img src="images\mpdrst-logo.png" alt="Logo"></a>
+            <a href="https://mpdrst.org"><img src="..\images\mpdrst-logo.png" alt="Logo"></a>
         </div>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <div class="nav-links">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Guru Diksha</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="https://mpdrst.org">Home</a></li>
+                <li><a href="gurudiksha.html">Guru Diksha</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="aboutUs.html">About</a>
                     <div class="dropdown-content">
-                        <a href="#">About Guruji</a>
-                        <a href="#">About MPDRST</a>
-                        <a href="#">About Members</a>
+                        <a href="aboutGuruji.html">About Guruji</a>
+                        <a href="aboutMPDRST.html">About MPDRST</a>
+                        <a href="members.html">About Members</a>
                     </div>
                 </li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="contectUs.html">Contact</a></li>
             </ul>
             <button>Donate</button>
         </div>
     </nav>
-    <main>
-        <div class="container">
-            <div class="hero-section">
-                <div class="textarea">
-                    <h1>"Join Hands to Build Sacred Spaces!</h1>
-                    <p>Your generous donation can help construct temples that inspire devotion and spiritual growth.
-                        Together, let’s preserve our heritage and create a haven for divine connection.</p>
-                    <button onclick="openUPI()">Donate</button>
-                </div>
-            </div>
-            <div class="donate-section">
-                <div class="donation">
-                    <h2>Donate Us</h2>
-                    <p>Service towards the Society: If you wish to Donate Us</p>
-                    <p>Every penny you donate today is a lifeline to someone in need, a beacon of hope in their darkest
-                        hour. Join us in making a difference, one heart at a time.</p>
-                    <h3>BANK DETAILS FOR DONATION:</h3>
-                    <ul>
-                        <li><strong>Account Holder:</strong> Maa Parashakti Dharm Rahasya Sewa Trust</li>
-                        <li><strong>Account Number:</strong> 50200093089111</li>
-                        <li><strong>IFSC:</strong> HDFC0008822</li>
-                    </ul>
-                    <button class="donate-button">Donate Now</button>
-                </div>
-                <div class="qr-code">
-                    <img src="images/mpdrst-qr.jpeg" alt="QR Code">
-                </div>
-            </div>
-        </div>
-    </main>
+
+
     <footer style="background-color: #002147; color: #fff; padding: 20px;">
         <div class="footer-container">
             <div class="footer-column">
                 <h4>About Us</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p><strong>MAA PARASHAKTI DHARM RAHASYA SEWA TRUST (MPDRST)</strong></p>
+                <p>MAA PARASHAKTI DHARM RAHASYA SEWA TRUST (MPDRST), founded by Dr. Suraj Pratap in 2024, is a non-profit organization dedicated to preserving and promoting the profound wisdom of Sanatan Hindu Dharma.</p>
             </div>
             <div class="footer-column">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="https://mpdrst.org/">Home</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contectUs.html">Contact Us</a></li>
+                    <li><a href="privacyPolicy.html">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4>Contact Us</h4>
-                <p>Address: 123 Main Street, City, State, ZIP</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Email: info@example.com</p>
+                <p>MPDRST Team</p>
+                <br>
+                <p>Phone: +918469536105</p>
+                <br>
+                <a href="contectUs.html" target="_blank">Contect Form</a>
+                <p>Email: dharamrahasya@gmail.com</p>
             </div>
             <div class="footer-column social-links">
                 <a href="https://www.facebook.com/Dharam-rahasya-channel-925495294279826" target="_blank"><i
@@ -698,11 +431,6 @@
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
-        }
-
-        function openUPI() {
-            const upiLink = "upi://pay?pa=vyapar.171104982881@hdfcbank&pn=Business%20Name&am=10.00&cu=INR";
-            window.location.href = upiLink;  // This will open the UPI app installed on the device
         }
     </script>
 

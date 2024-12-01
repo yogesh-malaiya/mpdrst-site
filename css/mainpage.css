@@ -466,38 +466,47 @@ body>main>.container>.hero-section {
 }
 
 /* donate section  */
+/* General styles for the donate section */
 .donate-section {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 20px; /* Space between columns */
-    align-items: center; /* Align content vertically */
-    text-align: left; /* Align text content to the left */
+    gap: 20px;
+    align-items: start;
+    text-align: left;
     padding: 20px;
-    max-width: 1200px; /* Constrain the width for better readability */
-    margin: 0 auto; /* Center the section */
+    max-width: 1200px;
+    margin: 20px auto; /* Added margin to prevent overlapping */
     box-sizing: border-box;
+    background: linear-gradient(135deg, #ff9800, #ff5722); /* Gradient background */
+    color: white; /* Text color */
+    border-radius: 10px; /* Rounded corners for the section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    position: relative; /* Ensure proper stacking in layout */
+    z-index: 1; /* Prevent overlap issues */
 }
 
+/* Heading styles */
 .donate-section h2 {
-    font-size: 2rem;
-    color: #333;
-    grid-column: 1 / span 2; /* Span both columns for the heading */
-    text-align: center;
+    font-size: 28px;
     margin-bottom: 10px;
-}
-
-.donate-section p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 10px;
+    color: #fff; /* White text for headings */
 }
 
 .donate-section h3 {
-    font-size: 1.2rem;
-    color: #333;
+    font-size: 20px;
     margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ffcc00; /* Accent color for subheadings */
 }
 
+/* Paragraph styles */
+.donate-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* List styles for bank details */
 .donate-section ul {
     list-style: none;
     padding: 0;
@@ -505,46 +514,49 @@ body>main>.container>.hero-section {
 }
 
 .donate-section ul li {
-    margin-bottom: 10px;
-    font-size: 1rem;
-    color: #555;
-}
-
-.qr-code-button {
-    text-align: center; /* Center content in the QR code column */
-}
-
-.qr-code-button img {
-    max-width: 100%; /* Ensure the image is responsive */
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
-.qr-code-button button {
-    background-color: #e63900;
-    color: #fff;
-    border: none;
-    padding: 12px 24px;
     font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 5px;
 }
 
-.qr-code-button button:hover {
-    background-color: #c53000;
+.donate-section ul li strong {
+    color: #ffcc00; /* Highlighted text color */
 }
 
-/* Responsive Design */
+/* QR code section */
+.qr-code img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #fff; /* White border around the QR code */
+    border-radius: 10px; /* Rounded corners for the QR code */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Button styles */
+.donate-button {
+    display: inline-block;
+    background-color: #ffffff; /* White button background */
+    color: #ff5722; /* Orange text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+    border: 2px solid #ff5722; /* Orange border for the button */
+}
+
+.donate-button:hover {
+    background-color: #ff5722; /* Orange background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Responsive styling for smaller screens */
 @media (max-width: 768px) {
     .donate-section {
-        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+        grid-template-columns: 1fr; /* Stack content in a single column */
+        text-align: center; /* Center align content for mobile */
     }
 
-    .qr-code-button {
-        margin-top: 20px;
+    .qr-code {
+        margin-top: 20px; /* Add spacing above the QR code */
     }
 }

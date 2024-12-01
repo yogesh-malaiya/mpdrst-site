@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>privacy Policy</title>
+    <title>Navbar</title>
+    <link rel="stylesheet" href="css/youtube.css">
     <style>
         /* Basic styles for the body */
         * {
@@ -353,78 +354,247 @@
     </style>
 
     <!-- End of header and footer css -->
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
+        /* main page css */
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        body>main>.container {
+            flex-shrink: 0;
+            color: #fff;
             padding: 20px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            /* position: fixed; */
+            bottom: 0;
+            width: calc(100% - 40px);
+            margin: 0 20px;
+            z-index: 999;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        h1, h2, h3 {
-            color: #d32f2f;
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            margin: 10px 0;
-        }
-
-        ul {
-            margin: 10px 0 20px 20px;
-            list-style-type: disc;
-        }
-
-        ul li {
-            margin-bottom: 8px;
-        }
-
-        .highlight {
-            background-color: #fbe9e7;
-            padding: 10px;
-            border-left: 4px solid #d32f2f;
-        }
-
-        .contact {
-            margin-top: 20px;
-            padding: 10px;
-            background: #e8f5e9;
-            border-left: 4px solid #388e3c;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #d32f2f;
+        body>main>.container>.hero-section {
+            background-image: url('images/hero.jpg');
+            /* Use forward slashes for file paths */
+            background-size: cover;
+            /* Ensures the image covers the entire element */
+            background-repeat: no-repeat;
+            /* Prevents the image from repeating */
+            background-attachment: fixed;
+            /* Keeps the background fixed during scrolling */
+            background-position: center;
+            /* Centers the image */
+            height: 100vh;
+            width: 100%;
+            opacity: 0.7;
+            /* Ensures the section takes full viewport height */
+            display: flex;
+            /* Aligns the content inside */
+            justify-content: center;
+            /* Centers content horizontally */
+            align-items: center;
+            /* Centers content vertically */
             color: white;
-            border-radius: 0 0 8px 8px;
+            /* Sets text color to contrast with the image */
+            text-align: center;
+            /* Centers the text inside */
+            padding: 20px;
+            box-sizing: border-box;
         }
 
-        .footer a {
-            color: #ffccbc;
-            text-decoration: underline;
+        .hero-section .textarea {
+            max-width: 600px;
+            /* Set a maximum width for better readability */
+            margin: 0 auto;
+            /* Center the text */
+            text-align: center;
+            /* Align text to the center */
+        }
+
+        .hero-section .textarea h1 {
+            font-family: 'Merriweather', serif;
+            /* Apply a sophisticated serif font */
+            font-size: 2.5rem;
+            /* Adjust font size for responsiveness */
+            line-height: 1.4;
+            /* Improve line spacing */
+            margin-bottom: 15px;
+            /* Add spacing below the heading */
+            color: #fff;
+            /* Ensure the text is visible on a dark background */
+        }
+
+        .hero-section .textarea p {
+            font-family: 'Roboto', sans-serif;
+            /* Apply a clean sans-serif font */
+            font-size: 1.2rem;
+            /* Adjust font size for readability */
+            line-height: 1.6;
+            /* Improve line spacing */
+            margin-bottom: 20px;
+            /* Add spacing below the paragraph */
+            color: #f0f0f0;
+            /* Lighter color for better contrast */
+        }
+
+        .hero-section button {
+            background-color: #ff4500;
+            /* Bright orange for visibility */
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-section button:hover {
+            background-color: #e63900;
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-section button:active {
+            transform: scale(0.95);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section .textarea h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section .textarea p {
+                font-size: 1rem;
+            }
+
+            .hero-section button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+
+        /* donate section  */
+        /* General styles for the donate section */
+        .donate-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Two equal columns */
+            gap: 20px;
+            align-items: start;
+            text-align: left;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            /* Added margin to prevent overlapping */
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #ff9800, #ff5722);
+            /* Gradient background */
+            color: white;
+            /* Text color */
+            border-radius: 10px;
+            /* Rounded corners for the section */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            /* Subtle shadow effect */
+            position: relative;
+            /* Ensure proper stacking in layout */
+            z-index: 1;
+            /* Prevent overlap issues */
+        }
+
+        /* Heading styles */
+        .donate-section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #fff;
+            /* White text for headings */
+        }
+
+        .donate-section h3 {
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: #ffcc00;
+            /* Accent color for subheadings */
+        }
+
+        /* Paragraph styles */
+        .donate-section p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        /* List styles for bank details */
+        .donate-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .donate-section ul li {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .donate-section ul li strong {
+            color: #ffcc00;
+            /* Highlighted text color */
+        }
+
+        /* QR code section */
+        .qr-code img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #fff;
+            /* White border around the QR code */
+            border-radius: 10px;
+            /* Rounded corners for the QR code */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Subtle shadow effect */
+        }
+
+        /* Button styles */
+        .donate-button {
+            display: inline-block;
+            background-color: #ffffff;
+            /* White button background */
+            color: #ff5722;
+            /* Orange text color */
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            /* Rounded corners for the button */
+            transition: background-color 0.3s ease;
+            /* Smooth hover transition */
+            border: 2px solid #ff5722;
+            /* Orange border for the button */
+        }
+
+        .donate-button:hover {
+            background-color: #ff5722;
+            /* Orange background on hover */
+            color: #ffffff;
+            /* White text on hover */
+        }
+
+        /* Responsive styling for smaller screens */
+        @media (max-width: 768px) {
+            .donate-section {
+                grid-template-columns: 1fr;
+                /* Stack content in a single column */
+                text-align: center;
+                /* Center align content for mobile */
+            }
+
+            .qr-code {
+                margin-top: 20px;
+                /* Add spacing above the QR code */
+            }
         }
     </style>
 </head>
@@ -432,107 +602,78 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href="https://mpdrst.org"><img src="..\images\mpdrst-logo.png" alt="Logo"></a>
+            <a href="https://mpdrst.org/"><img src="images\mpdrst-logo.png" alt="Logo"></a>
         </div>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <div class="nav-links">
             <ul>
-                <li><a href="https://mpdrst.org">Home</a></li>
-                <li><a href="gurudiksha.html">Guru Diksha</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="src/gurudiksha.html">Guru Diksha</a></li>
+                <li><a href="src/gallery.html">Gallery</a></li>
+                <li><a href="src/services.html">Services</a></li>
                 <li>
-                    <a href="aboutUs.html">About</a>
+                    <a href="src/aboutUs.html">About</a>
                     <div class="dropdown-content">
-                        <a href="aboutGuruji.html">About Guruji</a>
-                        <a href="aboutMPDRST.html">About MPDRST</a>
-                        <a href="members.html">About Members</a>
+                        <a href="src/aboutGuruji.html">About Guruji</a>
+                        <a href="src/aboutMPDRST.html">About MPDRST</a>
+                        <a href="src/members.html">About Members</a>
                     </div>
                 </li>
-                <li><a href="contectUs.html">Contact</a></li>
+                <li><a href="src/contectUs.html">Contact</a></li>
             </ul>
             <button>Donate</button>
         </div>
     </nav>
-    <div class="container">
-        <h1>Donor Privacy Policy</h1>
-        <p>
-            <strong>MAA PARASHAKTI DHARM RAHASYA SEWA TRUST</strong> and its website 
-            <a href="https://dharamrahasya.com" target="_blank">https://dharamrahasya.com</a> take your privacy seriously and treat all financial information about any transaction as highly confidential.
-        </p>
-        <p class="highlight">
-            The Foundation deeply values all contributions to sustain our mission. To protect the privacy of our donors and their special relationship with the Trust, we maintain the following policies:
-        </p>
-
-        <h2>Our Policies</h2>
-        <ul>
-            <li>We may request personal information such as name, address, phone number, email, and credit card number ONLY for accepting donations.</li>
-            <li>We will not release or use this information for other purposes without your consent.</li>
-            <li>We do not trade or sell your personal information.</li>
-            <li>We offer donors the option to be recognized anonymously.</li>
-            <li>Donors may request not to receive solicitations or specific mailings.</li>
-            <li>We protect personal information with secured logins and regular passcode changes.</li>
-        </ul>
-
-        <h2>Donor Rights</h2>
-        <ul>
-            <li>To be informed of the Trust’s mission and how donations are used.</li>
-            <li>To access the Trust’s most recent financial statements.</li>
-            <li>To receive appropriate acknowledgment and recognition.</li>
-            <li>To expect confidentiality of donation information.</li>
-            <li>To ask questions and receive prompt answers when making a donation.</li>
-        </ul>
-
-        <h2>What Information We Collect</h2>
-        <p>We collect donor information for processing payments and communicating about our activities. This includes:</p>
-        <ul>
-            <li>Name, amount donated, address, phone, email, and comments.</li>
-            <li>Data visible on checks for donations made via check.</li>
-        </ul>
-
-        <h2>How We Use Your Information</h2>
-        <p>Donor data is used for:</p>
-        <ul>
-            <li>Distributing receipts and thanking donors.</li>
-            <li>Informing donors about upcoming activities.</li>
-            <li>Record keeping and internal analysis.</li>
-            <li>Compliance with government reporting requirements.</li>
-        </ul>
-
-        <h2>Security</h2>
-        <p>
-            We are committed to protecting donor information from unauthorized access, alteration, or disclosure through robust security practices.
-        </p>
-
-        <h2>Contact Us</h2>
-        <div class="contact">
-            <p>If you have questions about this Donor Privacy Policy, contact us at:</p>
-            <p>Email: <a href="mailto:info@dharamrahasya.com">info@dharamrahasya.com</a></p>
+    <main>
+        <div class="container">
+            <div class="hero-section">
+                <div class="textarea">
+                    <h1>"Join Hands to Build Sacred Spaces!</h1>
+                    <p>Your generous donation can help construct temples that inspire devotion and spiritual growth.
+                        Together, let’s preserve our heritage and create a haven for divine connection.</p>
+                    <button onclick="openUPI()">Donate</button>
+                </div>
+            </div>
+            <div class="donate-section">
+                <div class="donation">
+                    <h2>Donate Us</h2>
+                    <p>Service towards the Society: If you wish to Donate Us</p>
+                    <p>Every penny you donate today is a lifeline to someone in need, a beacon of hope in their darkest
+                        hour. Join us in making a difference, one heart at a time.</p>
+                    <h3>BANK DETAILS FOR DONATION:</h3>
+                    <ul>
+                        <li><strong>Account Holder:</strong> Maa Parashakti Dharm Rahasya Sewa Trust</li>
+                        <li><strong>Account Number:</strong> 50200093089111</li>
+                        <li><strong>IFSC:</strong> HDFC0008822</li>
+                    </ul>
+                    <button class="donate-button">Donate Now</button>
+                </div>
+                <div class="qr-code">
+                    <img src="images/mpdrst-qr.jpeg" alt="QR Code">
+                </div>
+            </div>
+            <h1 class="youtube">Every Sunday Live Q&A Session On Youtube</h1>
+            <div id="videoSliderContainer">
+                <div id="videoSlider"></div>
+            </div>
         </div>
-
-        <h2>Updates</h2>
-        <p>
-            This policy may change periodically. Please check this page for updates.
-        </p>
-
-        <div class="footer">
-            <p>&copy; 2024 MAA PARASHAKTI DHARM RAHASYA SEWA TRUST | <a href="https://dharamrahasya.com" target="_blank">Visit Our Website</a></p>
-        </div>
-    </div>
+    </main>
     <footer style="background-color: #002147; color: #fff; padding: 20px;">
         <div class="footer-container">
             <div class="footer-column">
                 <h4>About Us</h4>
                 <p><strong>MAA PARASHAKTI DHARM RAHASYA SEWA TRUST (MPDRST)</strong></p>
-                <p>MAA PARASHAKTI DHARM RAHASYA SEWA TRUST (MPDRST), founded by Dr. Suraj Pratap in 2024, is a non-profit organization dedicated to preserving and promoting the profound wisdom of Sanatan Hindu Dharma.</p>
+                <p>MAA PARASHAKTI DHARM RAHASYA SEWA TRUST (MPDRST), founded by Dr. Suraj Pratap in 2024, is a
+                    non-profit organization dedicated to preserving and promoting the profound wisdom of Sanatan Hindu
+                    Dharma.</p>
             </div>
             <div class="footer-column">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="https://mpdrst.org">Home</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="contectUs.html">Contact Us</a></li>
-                    <li><a href="privacyPolicy.html">Privacy Policy</a></li>
+                    <li><a href="https://mpdrst.org/">Home</a></li>
+                    <li><a href="src/aboutUs.html">About Us</a></li>
+                    <li><a href="src/contectUs.html">Contact Us</a></li>
+                    <li><a href="src/privacyPolicy.html">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -563,14 +704,18 @@
             document.getElementById('copyright-year').textContent = new Date().getFullYear();
         </script>
     </footer>
-    
+
+    <script src="js/apiScript.js"></script>
+
     <script>
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
+
+        
     </script>
-    
-    </body>
-    
-    </html>
+
+</body>
+
+</html>
