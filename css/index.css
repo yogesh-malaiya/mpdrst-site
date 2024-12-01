@@ -235,3 +235,314 @@ h2.OurMission {
         font-size: 0.85rem;
     }
 }
+
+/* About guruji and trust session */
+
+/* Section Styles */
+/* Section Styles */
+#aboutSection {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Slider Styles */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% * 2); /* Adjust for the number of slides */
+}
+
+.slide {
+    flex: 0 0 100%; /* Each slide takes full width */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    text-align: justify;
+}
+
+.slide img {
+    width: 40%;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slide .content {
+    width: 60%;
+}
+
+.slide h2 {
+    margin-bottom: 10px;
+    color: #e91e63;
+}
+
+.slide p {
+    margin-bottom: 10px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    background: #e91e63;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.read-more-btn:hover {
+    background: #d81b60;
+}
+
+/* Slider Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #e91e63;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.slider-btn:hover {
+    background: #d81b60;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .slide {
+        flex-wrap: wrap; /* Allow wrapping */
+        text-align: center; /* Center-align text */
+    }
+
+    .slide img {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 15px; /* Add spacing below the image */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .slide .content {
+        width: 100%; /* Full width for the content */
+    }
+}
+
+/* product and services session */
+/* Products and Services Section */
+#productsServices {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#productsServices .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#productsServices h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #e91e63;
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1 1 calc(30% - 20px);
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    color: #e91e63;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.product-info p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: #e91e63;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.contact-btn:hover {
+    background: #d81b60;
+}
+
+.view-all-btn-container {
+    margin-top: 30px;
+}
+
+.view-all-btn {
+    background: #e91e63;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.view-all-btn:hover {
+    background: #d81b60;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* social media session */
+#socialMediaSection {
+    padding: 40px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+#socialMediaSection h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.social-media-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: 120px;
+}
+
+.social-media:hover {
+    transform: scale(1.05);
+}
+
+.social-media img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.social-media p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.website {
+    font-family: 'Arial', sans-serif;
+    color: #4267B2;
+}
+
+.youtube {
+    font-family: 'Courier New', monospace;
+    color: #FF0000;
+}
+
+.instagram {
+    font-family: 'Georgia', serif;
+    color: #E1306C;
+}
+
+.facebook {
+    font-family: 'Tahoma', sans-serif;
+    color: #4267B2;
+}
+
+.whatsapp {
+    font-family: 'Verdana', sans-serif;
+    color: #25D366;
+}
+
+.telegram {
+    font-family: 'Helvetica', sans-serif;
+    color: #0088CC;
+}
+
+.linktree {
+    font-family: 'Comic Sans MS', cursive;
+    color: #39E09B; /* Linktree’s signature green */
+}

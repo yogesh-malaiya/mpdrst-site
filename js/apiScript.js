@@ -45,3 +45,53 @@ function extractVideoId(url) {
 
 // Initialize slider
 displayVideos();
+
+
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('#prevBtn');
+const nextBtn = document.querySelector('#nextBtn');
+
+let currentIndex = 0;
+
+// Update Slider Position
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Previous Slide
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateSlider();
+});
+
+// Next Slide
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateSlider();
+});
+
+// Initialize Slider
+updateSlider();
+
+// JavaScript for Products and Services Contact Buttons
+
+// WhatsApp Integration
+const whatsappNumber = '918469536105';
+const whatsappBaseURL = `https://wa.me/${whatsappNumber}?text=`;
+
+// Handle Contact Us Button Click
+document.querySelectorAll('.contact-btn').forEach(button => {
+    button.addEventListener('click', (event) => {
+        const productDiv = event.target.closest('.product');
+        const productName = productDiv.querySelector('h3').innerText;
+        const message = `I am interested in ${productName}. Please provide me with the pricing details.`;
+        const whatsappURL = `${whatsappBaseURL}${encodeURIComponent(message)}`;
+        window.open(whatsappURL, '_blank');
+    });
+});
+
+// Handle View All Products Button Click
+document.querySelector('#viewAllProducts').addEventListener('click', () => {
+    window.location.href = 'src/services.html'; // Redirect to the services page
+});
