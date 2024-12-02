@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Store</title>
+    <link rel="stylesheet" href="../css/store.css">
     <style>
         /* Basic styles for the body */
         * {
@@ -366,7 +367,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="gurudiksha.html">Guru Diksha</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="services.html">Store</a></li>
                 <li>
                     <a href="aboutUs.html">About</a>
                     <div class="dropdown-content">
@@ -381,6 +382,94 @@
         </div>
     </nav>
 
+
+    <section id="productsServices">
+        <div class="container">
+            <h2>Our Products and Services</h2>
+            <div class="product-grid">
+                <!-- Kundli Analysis: PDF -->
+                <div class="product">
+                    <img src="../images/kundli-Analysis_Pdf.webp" alt="Kundli Analysis PDF">
+                    <div class="product-info">
+                        <h3>Kundli Analysis: PDF</h3>
+                        <p>200 Page Kundli Analysis Report by PDF sent to your email with answers to your questions.</p>
+                        <button class="contact-btn">Contact Us</button>
+                    </div>
+                </div>
+                <!-- Kundli Analysis: Printed -->
+                <div class="product">
+                    <img src="../images/kundli-Analysis-Printed.webp" alt="Kundli Analysis Printed">
+                    <div class="product-info">
+                        <h3>Kundli Analysis: Printed</h3>
+                        <p>200 Page Kundli Analysis Report as a printed copy delivered to your address by courier with answers to your questions.</p>
+                        <button class="contact-btn">Contact Us</button>
+                    </div>
+                </div>
+                <!-- Kundli Analysis: Live Talk -->
+                <div class="product">
+                    <img src="../images/kundli-Analysis-With-Live-Talk.webp" alt="Kundli Analysis Live Talk">
+                    <div class="product-info">
+                        <h3>Kundli Analysis: Live Talk</h3>
+                        <p>200 Page Kundli Analysis Report as a printed copy delivered to your address by courier with answers to your questions and a live video call discussion.</p>
+                        <button class="contact-btn">Contact Us</button>
+                    </div>
+                </div>
+                <!-- Shree Durga Saptshati -->
+                <div class="product">
+                    <img src="../images/shree-durga-saptshati-teeka-bhaag-1.webp" alt="Shree Durga Saptshati Teeka Bhaag 1">
+                    <div class="product-info">
+                        <h3>Shree Durga Saptshati Teeka Bhaag 1</h3>
+                        <p>Available on multiple platforms. Choose your preferred vendor below:</p>
+                    </div>
+                    <div class="platform-buttons">
+                        <a href="https://bookscape.com/product-details/shree-durga-saptshati-teeka-bhaag-1-1-9789353479442" class="platform-btn">
+                            <img src="../images/bookscape.png" alt="Bookscape">
+                        </a>
+                        <a href="https://amzn.in/d/ciqRdc7" class="platform-btn">
+                            <img src="../images/amazon.png" alt="Amazon">
+                        </a>
+                        <a href="https://www.flipkart.com/shree-durga-saptshati-teeka-bhaag-1/p/itmd58f9d4b64600" class="platform-btn">
+                            <img src="../images/flipkart.png" alt="Flipkart">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="upcomingProducts">
+        <div class="container">
+            <h2>Upcoming Products</h2>
+            <div class="product-grid">
+                <!-- Small Arti Book -->
+                <div class="product">
+                    <img src="../images/small-arti-book.jpeg" alt="Small Arti Book">
+                    <div class="product-info">
+                        <h3>Small Arti Book</h3>
+                        <p>A compact and portable book containing daily aartis and prayers.</p>
+                    </div>
+                </div>
+                <!-- Rudraksh Mala -->
+                <div class="product">
+                    <img src="../images/rudraksha.png" alt="Rudraksh Mala">
+                    <div class="product-info">
+                        <h3>Rudraksh Mala</h3>
+                        <p>Premium quality Rudraksh mala Jaap for spiritual and meditative purposes.</p>
+                    </div>
+                </div>
+                <!-- Lal Asan -->
+                <div class="product">
+                    <img src="../images/lalAsan.jpg" alt="Lal Asan">
+                    <div class="product-info">
+                        <h3>Lal Asan</h3>
+                        <p>Comfortable and durable red sitting mat for religious activities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+       
 
     <footer style="background-color: #002147; color: #fff; padding: 20px;">
         <div class="footer-container">
@@ -433,6 +522,7 @@
             navLinks.classList.toggle('active');
         }
     </script>
+    <script src="../js/apiScript.js"></script>
 
 </body>
 
