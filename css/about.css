@@ -1,0 +1,159 @@
+/* Main Section */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Guruji Image and Title */
+.guruji-image {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.guruji-image img {
+    max-width: 60%; /* Reduced size for better fit */
+    max-height: 300px; /* Ensures full image visibility */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    object-fit: contain; /* Ensures aspect ratio is maintained */
+}
+
+.guruji-image img:hover {
+    transform: scale(1.05);
+}
+
+.guruji-image h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 15px;
+}
+
+.guruji-image p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Table of Contents */
+.table-of-content {
+    background-color: #fff7e6; /* Soft yellow background */
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffc107; /* Adds a vibrant border */
+    text-align: left;
+}
+
+.table-of-content h2 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ff5722;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.table-of-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.table-of-content ul li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 30px; /* Space for the custom icon */
+}
+
+.table-of-content ul li:before {
+    content: "▶"; /* Arrow icon */
+    color: #ff5722; /* Vibrant orange */
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.table-of-content ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.table-of-content ul li a:hover {
+    color: #ff5722; /* Changes to orange on hover */
+    text-decoration: underline;
+}
+
+/* Guruji Info Section */
+.guruji-info {
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.guruji-info h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.guruji-info h3 {
+    font-size: 1.6rem;
+    color: #444;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 5px solid #ff5722;
+}
+
+.guruji-info p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .guruji-image img {
+        max-width: 80%;
+        max-height: 250px;
+    }
+
+    .guruji-image h1 {
+        font-size: 2rem;
+    }
+
+    .guruji-image p {
+        font-size: 1rem;
+    }
+
+    .guruji-info {
+        padding: 15px;
+    }
+
+    .guruji-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .guruji-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .guruji-info p {
+        font-size: 1rem;
+    }
+
+    .table-of-content ul li a {
+        font-size: 1rem;
+    }
+}
